@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/cag2050/webpack-hot-middleware_demo#readme",
   "devDependencies": {
-    "cross-env": "^3.1.3",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "webpack": "^1.13.3",
