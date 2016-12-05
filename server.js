@@ -1,22 +1,27 @@
 var http = require('http');
+
 var express = require('express');
+
 var app = express();
 
 app.use(require('morgan')('short'));
 
+// ************************************
+// This is the real meat of the example
+// ************************************
 (function () {
 
-    // 1: 创建一个webpack编译器
+    // Step 1: Create & configure a webpack compiler
     var webpack = require('webpack');
     var webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : './webpack.config');
     var compiler = webpack(webpackConfig);
 
-    // 2: 添加dev middleware到编译器和server
+    // Step 2: Attach the dev middleware to the compiler & the server
     app.use(require("webpack-dev-middleware")(compiler, {
         noInfo: true, publicPath: webpackConfig.output.publicPath
     }));
 
-    // 3: 添加hot middleware到编译器和server
+    // Step 3: Attach the hot middleware to the compiler & the server
     app.use(require("webpack-hot-middleware")(compiler, {
         log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
     }));
@@ -24,9 +29,11 @@ app.use(require('morgan')('short'));
 
 // Do anything you like with the rest of your express application.
 
+// server.js 使用
 app.get("/", function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
+// server.multientry.js 使用
 app.get("/multientry", function (req, res) {
     res.sendFile(__dirname + '/index-multientry.html');
 });

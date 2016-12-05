@@ -1,5 +1,5 @@
-console.log('Im just a separate entry point! All alone!');
+console.log('=====extra.js output======');
 
 if (module.hot) {
-  module.hot.accept();
+    module.hot.accept();
 }
