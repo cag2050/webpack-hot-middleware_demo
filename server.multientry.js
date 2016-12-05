@@ -1,14 +1,9 @@
 var http = require('http');
-
 var express = require('express');
-
 var app = express();
 
 app.use(require('morgan')('short'));
 
-// ************************************
-// This is the real meat of the example
-// ************************************
 (function () {
 
     // Step 1: Create & configure a webpack compiler
