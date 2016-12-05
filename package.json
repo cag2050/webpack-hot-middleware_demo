@@ -1,0 +1,27 @@
+{
+  "name": "webpack-hot-middleware_demo",
+  "version": "1.0.0",
+  "description": "* Install deps\r ```sh\r npm install\r ```\r * Start server\r ```sh\r npm start\r ```\r * Open page in browser http://localhost:1616\r * Open the developer console\r * Edit `client.js` & save\r * Watch the page reload\r * Also try making a syntax error in `client.js`.",
+  "main": "client.js",
+  "scripts": {
+    "start:multientry": "WEBPACK_CONFIG=./webpack.config.multientry.js node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cag2050/webpack-hot-middleware_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cag2050/webpack-hot-middleware_demo/issues"
+  },
+  "homepage": "https://github.com/cag2050/webpack-hot-middleware_demo#readme",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  }
+}
