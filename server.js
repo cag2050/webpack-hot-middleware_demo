@@ -13,6 +13,7 @@ app.use(require('morgan')('short'));
 
     // Step 1: Create & configure a webpack compiler
     var webpack = require('webpack');
+    // 使用 webpack.config.js
     var webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : './webpack.config');
     var compiler = webpack(webpackConfig);
 

@@ -3,10 +3,12 @@ var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&tim
 
 module.exports = {
     context: __dirname,
+    // 配置单个文件
     entry: {
         // Add the client which connects to our middleware
         client: ['./client.js', hotMiddlewareScript]
     },
+    // 也可以用下面这种方法
     //entry: [
     //  // Add the client which connects to our middleware
     //  // You can use full urls like 'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr'

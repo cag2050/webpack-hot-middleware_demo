@@ -3,6 +3,7 @@ var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&tim
 
 module.exports = {
     context: __dirname,
+    // 配置多个文件
     entry: {
         // Add the client which connects to our middleware
         client: ['./client.js', hotMiddlewareScript],
