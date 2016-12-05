@@ -4,7 +4,7 @@
   "description": "* Install deps\r ```sh\r npm install\r ```\r * Start server\r ```sh\r npm start\r ```\r * Open page in browser http://localhost:1616\r * Open the developer console\r * Edit `client.js` & save\r * Watch the page reload\r * Also try making a syntax error in `client.js`.",
   "main": "client.js",
   "scripts": {
-    "start:multientry": "WEBPACK_CONFIG=./webpack.config.multientry.js node server.js",
+    "start2": "WEBPACK_CONFIG=./webpack.config.multientry.js node server.js",
     "start": "node server.js"
   },
   "repository": {
