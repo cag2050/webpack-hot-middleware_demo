@@ -6,7 +6,7 @@ var timer = setInterval(updateClock, 1000);
 
 function updateClock() {
     time.innerHTML = (new Date()).toString();
-    console.log(222);
+    console.log(223332);
 }
 
 // Edit these styles to see them take effect immediately
